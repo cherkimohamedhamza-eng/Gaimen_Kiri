@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Japan Driving Test Prep</title>
+<meta name="description" content="Practice for Japan's driving licence knowledge test in English: 380+ true/false questions, exam simulation, road signs and practical test guide. Works offline.">
+<meta name="theme-color" content="#f3f4f7">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Drive JP">
+<link rel="stylesheet" href="css/app.css">
+<script>
+/* apply saved theme before first paint */
+try{var t=JSON.parse(localStorage.getItem('jdt1')||'{}').theme;if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}
+</script>
+</head>
+<body>
+<div id="app">
+  <nav id="tabs" aria-label="Main">
+    <div class="brand" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 28 3 6h26z" fill="#d7261e" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></svg><span>Drive JP</span></div>
+    <button data-tab="home" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg><span>Home</span></button>
+    <button data-tab="learn" aria-label="Learn"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.500 3H12v16H6.500A2.500 2.500 0 0 0 4 21.500zM20 5.500A2.500 2.500 0 0 0 17.500 3H12v16h5.500a2.500 2.500 0 0 1 2.500 2.500z"/></svg><span>Learn</span></button>
+    <button data-tab="practice" aria-label="Practice"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.500 12.500 2.500 2.500 4.500-5.500"/></svg><span>Practice</span></button>
+    <button data-tab="exam" aria-label="Exam"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.500 2M9.500 2.500h5"/></svg><span>Exam</span></button>
+    <button data-tab="more" aria-label="Settings"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg><span>Settings</span></button>
+  </nav>
+  <main id="main" tabindex="-1"></main>
+</div>
+<div id="overlays"></div>
+<div id="dialog" hidden></div>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+<input type="file" id="restoreFile" accept="application/json,.json" hidden>
+<noscript><p style="padding:24px">This app needs JavaScript.</p></noscript>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
